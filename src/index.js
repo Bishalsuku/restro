@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./scss/index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import MobNavContextProvider from "./contexts/MobNav.context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MobNavContextProvider>
+      <App />
+    </MobNavContextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+$max-width: 1643px;
+
+body {
+  background: #2d2d2d;
+  position: relative;
+}
+
+header {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  img.headBg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    user-select: none;
+  }
+  .headerWrapper {
+    max-width: $max-width;
+    margin: auto;
+    padding: 2rem 0 7rem 0;
+    display: flex;
+    justify-content: space-between;
+    nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+
+        a {
+          display: flex;
+          margin-right: 2rem;
+          text-decoration: none;
+          color: #fff;
+          cursor: pointer;
+          &.active {
+            border-bottom: 1px solid #fff;
+          }
+        }
+        li:last-child {
+          margin-right: 0;
+          position: relative;
+        }
+
+        p {
+          z-index: 2;
+          position: relative;
+          padding: 0.5rem 1rem;
+          font-family: "Rock Salt", cursive;
+          color: #000;
+          width: fit-content;
+        }
+
+        div {
+          position: absolute;
+          background: #ffff00;
+          width: 100%;
+          height: 100%;
+          filter: blur(12px);
+          border-radius: 4px;
+          top: 0;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      // height: 25px;
+      width: 25px;
+      z-index: 111;
+    }
+  }
+}
+.mobileNav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  height: 100vh;
+  padding: 3rem 2rem;
+  z-index: 11;
+  background: rgba(27, 27, 27, 0.8);
+  ul {
+    list-style: none;
+    // color: #fff;
+    a {
+      display: flex;
+      margin: 0.8rem 0;
+      width: fit-content;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      &.active {
+        border-bottom: 1px solid #fff;
+      }
+    }
+    li:last-child {
+      margin-right: 0;
+      position: relative;
+    }
+
+    p {
+      z-index: 2;
+      position: relative;
+      padding: 0.5rem 1rem;
+      font-family: "Rock Salt", cursive;
+      color: #000;
+      width: fit-content;
+    }
+
+    div {
+      position: absolute;
+      background: #ffff00;
+      width: 100%;
+      height: 100%;
+      filter: blur(12px);
+      border-radius: 4px;
+      top: 0;
+    }
+  }
+}
+.heroContainer {
+  position: relative;
+  max-width: $max-width;
+  z-index: 3;
+  margin: auto;
+  margin-top: -4rem;
+  img {
+    user-select: none;
+    width: 100%;
+  }
+  .heroBox {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    padding: 2rem;
+    transform: translate(0, -50%);
+    background: rgba(27, 27, 27, 0.8);
+    border-radius: 5px;
+    .heroBoxWrapper {
+      position: relative;
+      h1 {
+        position: relative;
+        max-width: 472px;
+        color: #fff;
+        z-index: 2;
+      }
+      .yellowPart {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        right: 0px;
+        margin-right: -3rem;
+        width: 150px;
+        height: 40px;
+        background: rgba(#ffff00, 0.3);
+      }
+    }
+
+    button {
+      background: #fff;
+      padding: 0.5rem 3rem;
+      border: none;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .dots {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+
+      .active-dot {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-left: 0.5rem;
+
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.lines {
+  margin: 2rem 0;
+
+  .line {
+    background-color: #fff;
+    border-radius: 100px;
+    height: 5px;
+    margin-top: 0.5rem;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  .first {
+    width: 80px;
+  }
+  .sec {
+    width: 40px;
+  }
+  .third {
+    width: 20px;
+  }
+}
+
+main {
+  background: #1d1d1d;
+}
+.menuContainer {
+  max-width: $max-width;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  img.bgimg {
+    position: absolute;
+    width: 100%;
+  }
+  h1 {
+    font-family: "Rock Salt", cursive;
+    color: #fff;
+  }
+
+  .menu {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    .textStyle {
+      color: red;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .menuCard {
+      display: flex;
+      img {
+        margin-right: 2rem;
+      }
+      .menuDesc {
+        margin-right: 3rem;
+        h2 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .menuBar {
+      color: #fff;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 1rem;
+      p {
+        &:first-child {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    img {
+      margin: 0.2rem 0 0 0.3rem;
+    }
+  }
+}
+.price {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  .regularPrice {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+    p {
+      padding: 0.5rem;
+      &:nth-child(1) {
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+  .largePrice {
+    p {
+      padding: 0.5rem;
+      &:nth-child(1) {
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+footer {
+  max-width: $max-width;
+  margin: auto;
+  padding: 3rem 0;
+  color: #fff;
+  .footerWrapper {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 4rem;
+      h3 {
+        margin: 2rem 0;
+        color: #ffff00;
+      }
+      p {
+        line-height: 1.5rem;
+        margin: 1rem 0;
+        &:last-child {
+          color: #000;
+        }
+      }
+      button {
+        border: none;
+        color: #ffff00;
+        background-color: transparent;
+        border-bottom: 1px solid #ffff00;
+        cursor: pointer;
+      }
+
+      .thirdGrid {
+        display: block;
+      }
+
+      .forthGrid {
+        position: relative;
+        align-self: center;
+
+        p {
+          position: relative;
+          z-index: 2;
+          padding: 0.5rem 2rem;
+          font-family: "Rock Salt", cursive;
+          color: #000;
+          text-align: center;
+        }
+
+        div {
+          position: absolute;
+          background: #ffff00;
+          top: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          filter: blur(12px);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1720px) {
+  header {
+    .headerWrapper {
+      margin: 0 3rem;
+    }
+  }
+  .heroContainer {
+    margin: 0 3rem;
+  }
+  .menuContainer {
+    margin: 0 3rem;
+  }
+  footer {
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .menuContainer {
+    .menu {
+      gap: 1rem;
+      .menuCard {
+        img {
+          max-width: 200px;
+          width: 100%;
+          margin-right: 1rem;
+        }
+        .menuDesc {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .menuContainer {
+    .menu {
+      grid-template-columns: 1fr;
+    }
+  }
+  footer .footerWrapper .grid .thirdGrid {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    .headerWrapper {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  }
+}
